@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+*{
+  font-family: "Orbitron", serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: #121212;
+  height: 100%;
+  width: 100vw;
+  color:  #F3F4F6;
+  display: flex;
+  justify-content: center; 
+  padding: 2rem;
+}

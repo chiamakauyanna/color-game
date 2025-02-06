@@ -29,6 +29,10 @@
 
 /* Game Content Centering */
 .game-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 100%;
 }
@@ -43,14 +47,11 @@
   margin-bottom: 1rem;
   padding-top: 1rem;
   text-align: center;
+  font-weight: bold;
 }
 
 .game-instructions h2 {
   font-size: 1.2rem;
-}
-
-.highlight {
-  font-weight: bold;
 }
 
 /* Score Display */
@@ -62,7 +63,6 @@
   text-shadow: 0 0 8px rgba(250, 255, 0, 0.9);
   padding-top: 1rem;
 }
-
 
 /* Game Status Messages */
 .status-message {
@@ -85,15 +85,27 @@
 
 /* Animations */
 @keyframes bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Small screens (mobile) */

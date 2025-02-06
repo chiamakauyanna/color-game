@@ -4,7 +4,7 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   gap: 1rem;
   padding: 1rem;
   border-radius: 10px;
@@ -12,8 +12,8 @@
 
 /* Color Buttons */
 .color-button {
-  width: 5rem; 
-  height: 4rem;
+  width: 6rem; 
+  height: 6rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;

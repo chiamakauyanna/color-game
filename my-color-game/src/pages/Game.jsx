@@ -6,7 +6,14 @@ import "../styles/Game.css";
 import { GameContext } from "../context/ColorGameContext";
 
 const Game = () => {
-  const { score, gameStatus, showMessage, setRandomColor, randomColorGenerator, setScore } = useContext(GameContext);
+  const {
+    score,
+    gameStatus,
+    showMessage,
+    setRandomColor,
+    randomColorGenerator,
+    setScore,
+  } = useContext(GameContext);
 
   const newGame = () => {
     setRandomColor(randomColorGenerator());
@@ -15,18 +22,21 @@ const Game = () => {
 
   return (
     <div className="game-container">
-      <Button text="New Game" className="new-game-button" handleClick={newGame} />
-      
-        <div className="game-instructions">
-          <h2 data-testid="gameInstructions">
-          Guess the color in the box!
-          </h2>
-        </div>
+      <Button
+        text="New Game"
+        className="new-game-button"
+        handleClick={newGame}
+        datatestid="newGameButton"
+      />
+      <div className="game-instructions">
+        <h2 data-testid="gameInstructions">Guess the color in the box!</h2>
+      </div>
       <div className="game-content">
         <MysteryBox />
 
-
-        <p className="score" data-testid="newGameButton">Score: {score}</p>
+        <p className="score" data-testid="score">
+          Score: {score}
+        </p>
 
         <div className="status-message">
           {showMessage && (

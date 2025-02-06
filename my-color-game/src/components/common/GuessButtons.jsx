@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ColorGameContext } from "../../context/gameContext";
+import "../../styles/GuessButtons.css";
 
 const GuessButtons = () => {
   const {
@@ -13,32 +14,27 @@ const GuessButtons = () => {
   } = useContext(ColorGameContext);
 
   const gameLogic = (selectedColor) => {
-    if (selectedColor === randomColor) {
-      setGameStatus("✅ Correct!");
-      setScore((prevScore) => prevScore + 1);
-      setShowMessage(true);
-      setTimeout(() => {
-        setShowMessage(false);
-      }, 2000);
-    } else {
-      setGameStatus("❌ Wrong! Try again.");
-      setShowMessage(true);
-      setTimeout(() => {
-        setShowMessage(false);
-      }, 2000);
-    }
-
+    const isCorrect = selectedColor === randomColor;
+  
+    setGameStatus(isCorrect ? "✅ Correct!" : "❌ Wrong! Try again.");
+    setScore((prevScore) => (isCorrect ? prevScore + 1 : prevScore));
+  
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 2000);
+  
     setRandomColor(randomColorGenerator());
   };
+  
 
   return (
-    <div className="grid grid-cols-3 mt-7 gap-3 p-4 rounded-lg">
+    <div className="button-container">
       {colorArray.map((color, index) => (
         <button
           key={index}
           style={{ backgroundColor: color }}
-          className="w-32 h-32 rounded transition duration-300 ease-in-out hover:scale-105"
+          className="color-button"
           onClick={() => gameLogic(color)}
+          data-testid="colorOption"
         ></button>
       ))}
     </div>

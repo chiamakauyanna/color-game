@@ -1,0 +1,94 @@
+/* Game Container */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* New Game Button */
+.new-game-button {
+  margin: 1rem 0;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.8rem;
+  border: 1px solid;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.new-game-button:hover {
+  transform: scale(1.1);
+}
+
+/* Game Content Centering */
+.game-content {
+  text-align: center;
+  width: 100%;
+}
+
+/* Game Instructions */
+.game-instructions {
+  color: #00d2ff; /* Neon Yellow */
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #00d2ff;
+  padding-bottom: 5px;
+  padding-top: 1rem;
+}
+
+.game-instructions h2 {
+  font-size: 1.2rem;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+/* Score Display */
+.score {
+  color: #faff00; /* Cyan Green */
+  font-size: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(250, 255, 0, 0.9);
+  padding-top: 1rem;
+}
+
+
+/* Game Status Messages */
+.status-message {
+  height: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Correct and Wrong Message Styling */
+.correct {
+  color: green;
+  animation: bounce 0.5s ease-in-out;
+}
+
+.wrong {
+  color: red;
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}

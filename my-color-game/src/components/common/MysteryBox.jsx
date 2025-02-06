@@ -1,15 +1,18 @@
 import { useContext } from "react";
 import { ColorGameContext } from "../../context/gameContext";
-
+import "../../styles/MysteryBox.css"; 
 const MysteryBox = () => {
   const { randomColor } = useContext(ColorGameContext);
+
   return (
-    <div className="flex justify-center mt-1 border-3 py-4 rounded-lg">
+    <div className="mystery-box">
       <div
-        className="w-32 h-24 rounded-t-full "
-        style={{ backgroundColor: randomColor,
-          boxShadow: `0 0 15px ${randomColor}`
-         }}
+        className="color-display"
+        style={{
+          backgroundColor: randomColor,
+          boxShadow: `0 0 15px ${randomColor}`,
+        }}
+        data-testid="colorBox"
       ></div>
     </div>
   );

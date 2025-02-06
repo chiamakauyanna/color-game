@@ -17,14 +17,14 @@ const Game = () => {
     <div className="game-container">
       <Button text="New Game" className="new-game-button" handleClick={newGame} />
       
+        <div className="game-instructions">
+          <h2 data-testid="gameInstructions">
+          Guess the color in the box!
+          </h2>
+        </div>
       <div className="game-content">
         <MysteryBox />
 
-        <div className="game-instructions">
-          <h2 data-testid="gameInstructions">
-            <span className="highlight">Instruction - </span>Match the color in the box!
-          </h2>
-        </div>
 
         <p className="score" data-testid="newGameButton">Score: {score}</p>
 

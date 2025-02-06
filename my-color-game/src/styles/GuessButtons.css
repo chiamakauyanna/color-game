@@ -2,6 +2,8 @@
 .button-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
   margin-top: 1.5rem;
   gap: 1rem;
   padding: 1rem;
@@ -10,8 +12,8 @@
 
 /* Color Buttons */
 .color-button {
-  width: 6rem; 
-  height: 6rem;
+  width: 5rem; 
+  height: 4rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -23,16 +25,17 @@
 }
 
 /* Responsive Sizes */
-@media (min-width: 768px) {
+@media (min-width: 641px) {
   .color-button {
     width: 8rem;
-    height: 6rem;
+    height: 8rem;
+    
   }
 }
 
 @media (min-width: 1024px) {
   .color-button {
-    width: 8rem;
+    width: 10rem;
     height: 8rem;
   }
 }

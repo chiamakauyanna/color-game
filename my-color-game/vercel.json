@@ -1,5 +1,16 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "commands": {
+      "build": "vite build"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }

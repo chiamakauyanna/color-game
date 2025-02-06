@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import GuessButtons from "../components/common/GuessButtons";
 import MysteryBox from "../components/common/MysteryBox";
-import { ColorGameContext } from "../context/gameContext";
 import Button from "../components/common/Button";
 import "../styles/Game.css";
+import { GameContext } from "../context/ColorGameContext";
 
 const Game = () => {
-  const { score, gameStatus, showMessage, setRandomColor, randomColorGenerator, setScore } = useContext(ColorGameContext);
+  const { score, gameStatus, showMessage, setRandomColor, randomColorGenerator, setScore } = useContext(GameContext);
 
   const newGame = () => {
     setRandomColor(randomColorGenerator());

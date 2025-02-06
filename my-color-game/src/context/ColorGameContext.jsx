@@ -1,8 +1,8 @@
 import React from "react";
 
-const ColorGameContext = React.createContext();
+const GameContext = React.createContext();
 
-const GameContext = (prop) => {
+const ColorGameContext = (prop) => {
   const [score, setScore] = React.useState(0);
   const [showMessage, setShowMessage] = React.useState(false);
   const [gameStatus, setGameStatus] = React.useState(false);
@@ -23,7 +23,7 @@ const GameContext = (prop) => {
   };
   const [randomColor, setRandomColor] = React.useState(randomColorGenerator());
   return (
-    <ColorGameContext.Provider
+    <GameContext.Provider
       value={{
         randomColor,
         setRandomColor,
@@ -38,7 +38,7 @@ const GameContext = (prop) => {
       }}
     >
       {prop.children}
-    </ColorGameContext.Provider>
+    </GameContext.Provider>
   );
 };
 

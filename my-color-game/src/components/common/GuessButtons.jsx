@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ColorGameContext } from "../../context/gameContext";
 import "../../styles/GuessButtons.css";
+import { GameContext } from "../../context/ColorGameContext";
 
 const GuessButtons = () => {
   const {
@@ -11,7 +11,7 @@ const GuessButtons = () => {
     setScore,
     setGameStatus,
     setShowMessage,
-  } = useContext(ColorGameContext);
+  } = useContext(GameContext);
 
   const gameLogic = (selectedColor) => {
     const isCorrect = selectedColor === randomColor;

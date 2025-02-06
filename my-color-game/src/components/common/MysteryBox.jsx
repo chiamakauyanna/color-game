@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ColorGameContext } from "../../context/gameContext";
 import "../../styles/MysteryBox.css"; 
+import { GameContext } from "../../context/ColorGameContext";
 const MysteryBox = () => {
-  const { randomColor } = useContext(ColorGameContext);
+  const { randomColor } = useContext(GameContext);
 
   return (
     <div className="mystery-box">

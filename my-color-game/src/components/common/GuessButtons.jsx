@@ -20,7 +20,7 @@ const GuessButtons = () => {
     setScore((prevScore) => (isCorrect ? prevScore + 1 : prevScore));
   
     setShowMessage(true);
-    setTimeout(() => setShowMessage(false), 2000);
+    setTimeout(() => setShowMessage(false), 1000);
   
     setRandomColor(randomColorGenerator());
   };

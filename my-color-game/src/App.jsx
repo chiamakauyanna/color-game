@@ -1,15 +1,15 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Game from "./pages/Game";
 import StartGame from "./pages/StartGame";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<StartGame />} />
         <Route path="game" element={<Game />}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
